@@ -36,8 +36,8 @@
       Estamos focados em proporcionar ótimas experiências aos seus clientes e insights valiosos para impulsionar os negócios. Nossa equipe experiente e nossos squads exclusivos estão prontos para acelerar a transformação digital do seu negócio através da implementação de soluções tecnológicas inovadoras e eficazes.
     </p>
 
-    <!-- Aqui começa o bloco com as 3 apresentações lado a lado -->
-    <div class="quadrado"> <!-- nome da classe precisa bater com o CSS -->
+   
+    <div class="quadrado"> 
       <div id="Apresentacao1">
         <span>Inovação Tecnológica</span>
       </div>
@@ -50,7 +50,7 @@
         <span>Squads Sob Demanda</span>
       </div>
     </div>
-    <!-- Fim do bloco -->
+    
 
   </div>
 
@@ -75,19 +75,19 @@
   window.addEventListener("scroll", function () {
     const posicaoAtual = window.scrollY;
 
-    // Aplica fundo branco se rolar 50px ou mais
+    
     if (posicaoAtual > 50) {
       barra.classList.add("scrolled");
     } else {
       barra.classList.remove("scrolled");
     }
 
-    // Detecta direção do scroll
+    
     if (posicaoAtual > ultimaPosicaoScroll) {
-      // Rolando para baixo -> esconder barra
+      
       barra.classList.add("oculta");
     } else {
-      // Rolando para cima -> mostrar barra
+      
       barra.classList.remove("oculta");
     }
 
