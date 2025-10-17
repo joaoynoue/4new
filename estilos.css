@@ -1,0 +1,250 @@
+/* Reset e base */
+body {
+    margin: 0;
+    background-color: #fff;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+/* Barra de navegação fixa no topo */
+.Barra {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 70px;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    z-index: 9999;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+/* Barra quando está scrolled (rolada) */
+.Barra.scrolled {
+    background-color: white;
+}
+
+/* Barra oculta (desliza para cima) */
+.Barra.oculta {
+    transform: translateY(-100%);
+}
+
+/* Barra hover (quando não está scrolled) */
+.Barra:not(.scrolled):hover {
+    background-color: white;
+}
+
+/* Links do menu */
+.Barra nav a {
+    position: relative;
+    color: white;
+    text-decoration: none;
+    margin-right: 20px;
+    font-weight: bold;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 16px;
+    padding-bottom: 5px;
+    transition: color 0.3s ease;
+}
+
+/* Links hover - underline roxa com transição */
+.Barra nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 0;
+    background-color: purple;
+    transition: width 0.3s ease;
+}
+
+.Barra nav a:hover::after {
+    width: 100%;
+}
+
+/* Ajusta cor dos links quando a barra está scrolled ou no hover */
+.Barra.scrolled nav a,
+.Barra:not(.scrolled):hover nav a {
+    color: black;
+}
+
+/* Logo na barra */
+.logo {
+    height: 50px;
+    margin-right: 20px;
+}
+
+/* Área fundo da página */
+.fundo {
+    height: 650px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    color: white;
+    text-align: left;
+    position: relative;
+    background-image: url('fotos/R.jfif');
+    background-size: cover;
+    background-position: center;
+    padding-left: 100px;
+    gap: 8px;
+}
+
+/* Camada escura com degradê na área de fundo */
+.fundo::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.9) 0%,
+        rgba(0, 0, 0, 0.6) 30%,
+        rgba(0, 0, 0, 0.6) 70%,
+        rgba(0, 0, 0, 0.9) 100%
+    );
+    z-index: 1;
+    pointer-events: none;
+}
+
+/* Título na área de fundo */
+.titulo-fundo {
+    position: relative;
+    z-index: 2;
+    font-family: 'Roboto', sans-serif;
+    font-size: 3rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 6px rgba(0,0,0,0.7);
+    max-width: 600px;
+    line-height: 1.3;
+    white-space: normal;
+    margin-top: -80px;
+    text-align: left;
+}
+
+/* Descrição abaixo do título */
+.descricao {
+    position: relative;
+    z-index: 2;
+    font-family: 'Roboto', sans-serif;
+    max-width: 600px;
+    line-height: 1.4;
+    white-space: normal;
+    margin-top: -30px;
+    text-align: left;
+    color: white;
+}
+
+/* Botão padrão */
+#botao-padrao {
+    position: relative;
+    z-index: 2;
+    background-color: #fff;
+    color: rgb(0, 0, 0);
+    border: none;
+    border-radius: 25px;
+    padding: 12px 30px;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    margin-top: 0;
+}
+
+#botao-padrao:hover {
+    background-color: #c2c1c1;
+    color: rgb(196, 0, 147);
+}
+
+/* Área de informações */
+.info {
+    color: #242323;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    text-align: center;
+    margin-top: 60px;
+}
+.info b{
+    color: purple;
+}
+
+/* Descrição geral */
+.descricao-geral {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    text-align: center;
+    padding: 5px 100px;
+    box-sizing: border-box;
+}
+
+.descricao-geral b{
+    color: rgb(0, 0, 0);
+}
+
+/* Container dos quadrados de apresentação */
+.quadrado {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 40px;
+}
+
+/* Estilo dos blocos de apresentação */
+#Apresentacao1,
+#Apresentacao2,
+#Apresentacao3 {
+    position: relative;
+    width: 200px;
+    height: 300px;
+    padding: 20px;
+    border-radius: 15px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    font-family: 'Lucida Sans', Arial, sans-serif;
+    font-size: 27px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+}
+
+/* Overlay escuro no fundo dos blocos */
+#Apresentacao1::before,
+#Apresentacao2::before,
+#Apresentacao3::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+    z-index: 0;
+}
+
+/* Texto fica acima do overlay */
+#Apresentacao1 > span,
+#Apresentacao2 > span,
+#Apresentacao3 > span {
+    position: relative;
+    z-index: 1;
+}
+
+/* Imagens específicas para cada bloco */
+#Apresentacao1 {
+    background-image: url('fotos/inovacao.jpg');
+}
+
+#Apresentacao2 {
+    background-image: url('fotos/DIGITAL.jpeg');
+}
+
+#Apresentacao3 {
+    background-image: url('fotos/SQUADS.jfif');
+}

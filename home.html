@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>4News</title>
+  <link rel="stylesheet" href="estilos.css" />
+</head>
+
+<body>
+
+  <div class="Barra">
+    <img src="fotos/Logo4new.svg" alt="Logo 4News" class="logo" />
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="sobre.html">Sobre</a>
+      <a href="equipe.html">Serviços</a>
+      <a href="noticias.html">Tecnologia</a>
+      <a href="contato.html">Arquitetura Corporativa</a>
+      <a href="noticias.html">Inovação</a>
+      <a href="noticias.html">Contato</a>
+    </nav>
+  </div>
+
+  <div class="fundo">
+    <h1 class="titulo-fundo">Soluções Integradas de Tecnologia</h1>
+    <p class="descricao">Sua empresa está evoluindo em transformação digital e soluções integradas de tecnologia?</p>
+    <button id="botao-padrao"> <b>></b> Saiba Mais</button>
+  </div>  
+
+  <div class="info">
+    <h2><b>4NEW</b> a peça que falta para a transformação digital do seu <br> negócio</h2>
+    <p class="descricao-geral">
+      A <b>4NEW</b> é uma empresa de soluções integradas de tecnologia, com o compromisso de gerar resultados estratégicos através de squads dedicados, utilizando tecnologias avançadas e visão centrada na eficiência e conectividade.
+      <br><br>
+      Estamos focados em proporcionar ótimas experiências aos seus clientes e insights valiosos para impulsionar os negócios. Nossa equipe experiente e nossos squads exclusivos estão prontos para acelerar a transformação digital do seu negócio através da implementação de soluções tecnológicas inovadoras e eficazes.
+    </p>
+
+    <!-- Aqui começa o bloco com as 3 apresentações lado a lado -->
+    <div class="quadrado"> <!-- nome da classe precisa bater com o CSS -->
+      <div id="Apresentacao1">
+        <span>Inovação Tecnológica</span>
+      </div>
+
+      <div id="Apresentacao2">
+        <span>Transformação Digital</span>
+      </div>
+
+      <div id="Apresentacao3">
+        <span>Squads Sob Demanda</span>
+      </div>
+    </div>
+    <!-- Fim do bloco -->
+
+  </div>
+
+</body>
+</html>
+
+<script>
+  window.addEventListener("scroll", function () {
+    const barra = document.querySelector(".Barra");
+    if (window.scrollY > 50) {
+      barra.classList.add("scrolled");
+    } else {
+      barra.classList.remove("scrolled");
+    }
+  });
+</script>
+
+<script>
+  let ultimaPosicaoScroll = window.scrollY;
+  const barra = document.querySelector(".Barra");
+
+  window.addEventListener("scroll", function () {
+    const posicaoAtual = window.scrollY;
+
+    // Aplica fundo branco se rolar 50px ou mais
+    if (posicaoAtual > 50) {
+      barra.classList.add("scrolled");
+    } else {
+      barra.classList.remove("scrolled");
+    }
+
+    // Detecta direção do scroll
+    if (posicaoAtual > ultimaPosicaoScroll) {
+      // Rolando para baixo -> esconder barra
+      barra.classList.add("oculta");
+    } else {
+      // Rolando para cima -> mostrar barra
+      barra.classList.remove("oculta");
+    }
+
+    ultimaPosicaoScroll = posicaoAtual;
+  });
+</script>
