@@ -413,6 +413,7 @@ footer {
     padding: 22px;
   }
 }
+
 /* Título principal */
 .titulo-fundo {
   position: relative;
@@ -459,6 +460,7 @@ footer {
   cursor: pointer;
   transition: background-color 0.4s ease, border-color 0.4s ease, color 0.4s ease;
   margin-top: 20px;
+  text-decoration: none;
 }
 
 .botao-padrao:hover {
@@ -1116,7 +1118,7 @@ footer {
 
   .descricao {
     font-size: 14px;
-   
+
   }
 
   .botao-padrao {
@@ -1163,6 +1165,7 @@ footer {
   margin: 40px auto;
   padding: 40px 20px;
 }
+
 /* ===== SOBRE - INTEGRAÇÃO DAS SEÇÕES ===== */
 .sobre-page .info {
   background: rgba(0, 0, 0, 10);
@@ -1178,3 +1181,10 @@ footer {
 
 /* ===== ROLAGEM PÁGINA HOME ===== */
 
+html {
+  scroll-behavior: smooth;
+}
+
+#info {
+  scroll-margin-top: 90px;
+}
