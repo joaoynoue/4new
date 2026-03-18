@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Sobre - 4NEW</title>
+    <link rel="stylesheet" href="estilos.css" />
+    <link rel="icon" type="image/svg+xml" href="fotos/Logo4new.svg" />
+</head>
+
+<body class="sobre-page">
+
+    <div class="Barra">
+        <img src="fotos/Logo4new.svg" alt="Logo 4NEW" class="logo" />
+        <nav>
+            <a href="home.html">Home</a>
+            <a href="sobre.html">Sobre</a>
+            <a href="servicos.html">Serviços</a>
+            <a href="tecnologia.html">Tecnologia</a>
+            <a href="arquitetura.html">Arquitetura Corporativa</a>
+            <a href="inovacao.html">Inovação</a>
+            <a href="contato.html">Contato</a>
+        </nav>
+    </div>
+
+    <section class="hero-sobre">
+        <div class="hero-sobre-conteudo">
+            <h1 class="titulo-fundo">QUEM SOMOS</h1>
+            <p class="descricao">
+                Desenvolvemos soluções tecnológicas inovadoras que aceleram a transformação digital e geram valor para empresas.
+            </p>
+        </div>
+    </section>
+
+    <section class="sobre-blocos">
+        <div class="caixa-sobre reveal">
+            <h2>Nossa História</h2>
+            <p>
+                A 4NEW nasceu com o propósito de conectar estratégia, inovação e tecnologia
+                para entregar soluções reais e eficientes para empresas em evolução.
+            </p>
+        </div>
+
+        <div class="caixa-sobre reveal">
+            <h2>Missão</h2>
+            <p>
+                Gerar valor para negócios por meio de soluções tecnológicas integradas,
+                com foco em performance, transformação digital e resultados consistentes.
+            </p>
+        </div>
+
+        <div class="caixa-sobre reveal">
+            <h2>Visão</h2>
+            <p>
+                Ser referência em inovação e arquitetura de soluções, apoiando empresas
+                na construção de um futuro mais conectado, inteligente e escalável.
+            </p>
+        </div>
+
+        <div class="caixa-sobre reveal">
+            <h2>Valores</h2>
+            <p>
+                Compromisso, inovação, colaboração, transparência e excelência fazem parte
+                da nossa cultura e da forma como entregamos cada projeto.
+            </p>
+        </div>
+        <div class="caixa-sobre reveal">
+            <h2>Tecnologia</h2>
+            <p>
+                Utilizamos tecnologias modernas para entregar soluções eficientes e escaláveis.
+            </p>
+        </div>
+        
+        <div class="caixa-sobre reveal">
+            <h2>Inovação</h2>
+            <p>
+                Buscamos constantemente novas ideias e abordagens para gerar valor aos clientes.
+            </p>
+        </div>
+        
+        <div class="caixa-sobre reveal">
+            <h2>Squads</h2>
+            <p>
+                Times dedicados focados em performance e resultados para cada projeto.
+            </p>
+        </div>
+        
+        <div class="caixa-sobre reveal">
+            <h2>Resultados</h2>
+            <p>
+                Entregamos soluções com foco em impacto real e crescimento do negócio.
+            </p>
+        </div>
+        <div class="caixa-sobre reveal">
+            <h2>Arquitetura</h2>
+            <p>
+                Desenvolvemos arquiteturas corporativas sólidas, garantindo integração,
+                escalabilidade e eficiência nos sistemas.
+            </p>
+        </div>
+        
+        <div class="caixa-sobre reveal">
+            <h2>Integração</h2>
+            <p>
+                Conectamos sistemas e plataformas para otimizar processos e melhorar
+                a comunicação entre áreas e tecnologias.
+            </p>
+        </div>
+        
+        <div class="caixa-sobre reveal">
+            <h2>Dados</h2>
+            <p>
+                Transformamos dados em insights estratégicos para apoiar decisões
+                inteligentes e impulsionar resultados.
+            </p>
+        </div>
+        
+        <div class="caixa-sobre reveal">
+            <h2>Transformação Digital</h2>
+            <p>
+                Ajudamos empresas a evoluir digitalmente com soluções modernas,
+                inovadoras e orientadas ao futuro.
+            </p>
+        </div>
+    </section>
+
+    <footer>
+        Copyright © 2026 4New. Todos os direitos reservados.
+    </footer>
+
+    <script>
+        let ultimaPosicaoScroll = window.scrollY;
+        const barra = document.querySelector(".Barra");
+
+        window.addEventListener("scroll", function () {
+            const posicaoAtual = window.scrollY;
+
+            if (posicaoAtual > 50) {
+                barra.classList.add("scrolled");
+            } else {
+                barra.classList.remove("scrolled");
+            }
+
+            if (posicaoAtual > ultimaPosicaoScroll) {
+                barra.classList.add("oculta");
+            } else {
+                barra.classList.remove("oculta");
+            }
+
+            ultimaPosicaoScroll = posicaoAtual;
+        });
+
+        const reveals = document.querySelectorAll(".reveal");
+
+        function mostrarAoScroll() {
+            const triggerBottom = window.innerHeight * 0.88;
+
+            reveals.forEach((element) => {
+                const top = element.getBoundingClientRect().top;
+                if (top < triggerBottom) {
+                    element.classList.add("ativo");
+                }
+            });
+        }
+
+        window.addEventListener("scroll", mostrarAoScroll);
+        window.addEventListener("load", mostrarAoScroll);
+    </script>
+
+</body>
+
+</html>

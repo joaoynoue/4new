@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Tecnologia - 4NEW</title>
+    <link rel="stylesheet" href="estilos.css" />
+    <link rel="icon" type="image/svg+xml" href="fotos/Logo4new.svg" />
+</head>
+
+<body>
+
+    <div class="Barra">
+        <img src="fotos/Logo4new.svg" alt="Logo 4NEW" class="logo" />
+        <nav>
+            <a href="home.html">Home</a>
+            <a href="sobre.html">Sobre</a>
+            <a href="servicos.html">Serviços</a>
+            <a href="tecnologia.html">Tecnologia</a>
+            <a href="arquitetura.html">Arquitetura Corporativa</a>
+            <a href="inovacao.html">Inovação</a>
+            <a href="contato.html">Contato</a>
+        </nav>
+    </div>
+
+    <section class="fundo fundo-tecnologia">
+    <h1 class="titulo-fundo">Tecnologia 4NEW</h1>
+    <p class="descricao">Soluções tecnológicas para sua empresa evoluir.</p>
+    <button class="botao-padrao">Saiba mais</button>
+</section>
+
+    <section class="info">
+        <h2><b>4NEW</b> subtítulo da página</h2>
+        <p class="descricao-geral">
+            Conteúdo da nova página aqui.
+        </p>
+    </section>
+
+    <footer>
+        Copyright © 2026 4New. Todos os direitos reservados.
+    </footer>
+
+    <script>
+        let ultimaPosicaoScroll = window.scrollY;
+        const barra = document.querySelector(".Barra");
+
+        window.addEventListener("scroll", function () {
+            const posicaoAtual = window.scrollY;
+
+            if (posicaoAtual > 50) {
+                barra.classList.add("scrolled");
+            } else {
+                barra.classList.remove("scrolled");
+            }
+
+            if (posicaoAtual > ultimaPosicaoScroll) {
+                barra.classList.add("oculta");
+            } else {
+                barra.classList.remove("oculta");
+            }
+
+            ultimaPosicaoScroll = posicaoAtual;
+        });
+    </script>
+
+</body>
+
+</html>

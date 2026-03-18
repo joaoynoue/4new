@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Serviços - 4NEW</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="estilos.css" />
+
+    <!-- Ícone -->
+    <link rel="icon" type="image/svg+xml" href="fotos/Logo4new.svg" />
+</head>
+
+<body>
+
+    <!-- ===== NAVBAR ===== -->
+    <div class="Barra">
+        <img src="fotos/Logo4new.svg" alt="Logo 4NEW" class="logo" />
+        <nav>
+            <a href="home.html">Home</a>
+            <a href="sobre.html">Sobre</a>
+            <a href="servicos.html">Serviços</a>
+            <a href="tecnologia.html">Tecnologia</a>
+            <a href="arquitetura.html">Arquitetura Corporativa</a>
+            <a href="inovacao.html">Inovação</a>
+            <a href="contato.html">Contato</a>
+        </nav>
+    </div>
+
+    <!-- ===== HERO / FUNDO ===== -->
+    <!-- TROQUE A CLASSE fundo-xxx dependendo da página -->
+    <section class="fundo fundo-home">
+        <h1 class="titulo-fundo">Título da Página</h1>
+
+        <p class="descricao">
+            Texto principal da página. Explique rapidamente o que é essa seção.
+        </p>
+
+        <button class="botao-padrao">Saiba mais</button>
+    </section>
+
+    <!-- ===== CONTEÚDO ===== -->
+    <section class="info">
+        <h2><b>4NEW</b> subtítulo da página</h2>
+
+        <p class="descricao-geral">
+            Aqui você coloca o conteúdo da página. Pode ser descrição,
+            explicação de serviços, texto institucional, etc.
+        </p>
+    </section>
+
+    <!-- ===== SEÇÃO EXTRA (OPCIONAL) ===== -->
+    <section class="info">
+        <h2>Outra seção</h2>
+
+        <p class="descricao-geral">
+            Você pode duplicar esse bloco para criar novas seções.
+        </p>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer>
+        Copyright © 2025 4New. Todos os direitos reservados.
+    </footer>
+
+    <!-- ===== SCRIPT NAVBAR ===== -->
+    <script>
+        let ultimaPosicaoScroll = window.scrollY;
+        const barra = document.querySelector(".Barra");
+
+        window.addEventListener("scroll", function () {
+            const posicaoAtual = window.scrollY;
+
+            if (posicaoAtual > 50) {
+                barra.classList.add("scrolled");
+            } else {
+                barra.classList.remove("scrolled");
+            }
+
+            if (posicaoAtual > ultimaPosicaoScroll) {
+                barra.classList.add("oculta");
+            } else {
+                barra.classList.remove("oculta");
+            }
+
+            ultimaPosicaoScroll = posicaoAtual;
+        });
+    </script>
+
+</body>
+
+</html>
