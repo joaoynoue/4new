@@ -296,7 +296,135 @@ footer {
   background-image: url('fotos/inovacao.jpg');
 }
 
-/* ===== Página SOBRE ===== */
+/* ===== Página Tecnologia ===== */
+.tecnologia-page {
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.72), rgba(0, 0, 0, 0.72)),
+    url('fotos/inovacao.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.hero-sobre {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 20px 60px;
+}
+
+.titulo-fundo {
+  color: white;
+  font-size: clamp(2.2rem, 5vw, 4.5rem);
+  font-weight: 700;
+  text-shadow: 0 4px 18px rgba(0, 0, 0, 0.45);
+}
+
+/* ===== Seção das áreas de tecnologia ===== */
+.areas-tecnologia {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 80px 20px 120px;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.tech-card {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  min-height: 320px;
+  padding: 24px;
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.10);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.30);
+  overflow: hidden;
+
+  opacity: 0;
+  transition: all 0.9s ease;
+}
+
+/* alterna imagem/texto */
+.tech-card:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+.tech-img {
+  flex: 1;
+  min-width: 280px;
+}
+
+.tech-img img {
+  width: 100%;
+  height: 270px;
+  object-fit: cover;
+  border-radius: 18px;
+  display: block;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+}
+
+.tech-texto {
+  flex: 1;
+  color: white;
+}
+
+.tech-texto h2 {
+  font-size: 2rem;
+  margin-bottom: 14px;
+  color: rgb(233, 139, 31);
+}
+
+.tech-texto p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.92);
+}
+
+/* animações laterais */
+.reveal-left {
+  transform: translateX(-120px);
+}
+
+.reveal-right {
+  transform: translateX(120px);
+}
+
+.tech-card.show {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* responsivo */
+@media (max-width: 900px) {
+
+  .tech-card,
+  .tech-card:nth-child(even) {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .tech-img img {
+    height: 230px;
+  }
+
+  .tech-texto h2 {
+    font-size: 1.7rem;
+  }
+
+  .tech-texto p {
+    font-size: 1rem;
+  }
+}
+
+
 
 /* ===== Página SOBRE ===== */
 
@@ -386,6 +514,11 @@ footer {
   margin-top: 20px;
   background: transparent;
   color: white;
+}
+.Footer-transparente{
+    margin-top: 20px;
+    background: transparent;
+    color: white;
 }
 
 /* ===== RESPONSIVO ===== */

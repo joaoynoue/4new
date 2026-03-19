@@ -9,7 +9,7 @@
     <link rel="icon" type="image/svg+xml" href="fotos/Logo4new.svg" />
 </head>
 
-<body>
+<body class="tecnologia-page">
 
     <div class="Barra">
         <img src="fotos/Logo4new.svg" alt="Logo 4NEW" class="logo" />
@@ -24,22 +24,77 @@
         </nav>
     </div>
 
-    <section class="fundo fundo-tecnologia">
-        <h1 class="titulo-fundo">Tecnologia 4NEW</h1>
-        <p class="descricao">Soluções tecnológicas para sua empresa evoluir.</p>
-        <button class="botao-padrao">Saiba mais</button>
+    <section class="hero-sobre">
+        <h1 class="titulo-fundo">Tecnologia <b style="color: rgb(233, 139, 31);">4NEW</b></h1>
+        
     </section>
 
-    <section class="info">
-        <h2><b>4NEW</b> subtítulo da página</h2>
-        <p class="descricao-geral">
-            Conteúdo da nova página aqui.
-        </p>
+    
+    <section class="areas-tecnologia">
+        <div class="tech-card reveal-left">
+            <div class="tech-img">
+                <img src="fotos/technology3.jpg" alt="Modernização de Aplicativos e Conectividade" />
+            </div>
+            <div class="tech-texto">
+                <h2>Modernização de Aplicativos e Conectividade</h2>
+                <p>
+                    Como parceiros da Opentext, estamos posicionados de forma única para auxiliar na modernização de aplicativos e na
+                    melhoria da conectividade, utilizando as ferramentas avançadas do segmento AMC.
+                    Os produtos da linha AMC não só apoiam a transição entre tecnologias anteriores e inovações atuais, mas também
+                    potencializam o valor dos investimentos em TI. Esta modernização se baseia em três pilares fundamentais: aplicação,
+                    processo e infraestrutura. Juntos, esses pilares garantem uma transformação coesa e eficiente.
+                </p>
+            </div>
+        </div>
+    
+        <div class="tech-card reveal-right">
+            <div class="tech-img">
+                <img src="fotos/technology5.jpg" alt="Cibersegurança" />
+            </div>
+            <div class="tech-texto">
+                <h2>Cibersegurança</h2>
+                <p>
+                    Proteção de dados, sistemas e operações com estratégias robustas de segurança,
+                    monitoramento contínuo e prevenção contra ameaças digitais.
+                </p>
+            </div>
+        </div>
+    
+        <div class="tech-card reveal-left">
+            <div class="tech-img">
+                <img src="fotos/technology2.jpg" alt="Automação e Integração" />
+            </div>
+            <div class="tech-texto">
+                <h2>Automação e Integração</h2>
+                <p>
+                    Otimizamos processos por meio de automação inteligente e integração entre plataformas,
+                    reduzindo custos operacionais e aumentando a produtividade.
+                </p>
+            </div>
+        </div>
+    
+        <div class="tech-card reveal-right">
+            <div class="tech-img">
+                <img src="fotos/technology4.jpg" alt="Dados e Analytics" />
+            </div>
+            <div class="tech-texto">
+                <h2>Dados e Analytics</h2>
+                <p>
+                    Transformamos dados em informação estratégica com dashboards, análise inteligente
+                    e apoio à tomada de decisão orientada por resultados.
+                </p>
+            </div>
+        </div>
     </section>
 
-    <footer>
+    
+    <footer class="Footer-transparente">
         Copyright © 2026 4New. Todos os direitos reservados.
     </footer>
+
+
+   
+
 
     <script>
         let ultimaPosicaoScroll = window.scrollY;
@@ -61,6 +116,22 @@
             }
 
             ultimaPosicaoScroll = posicaoAtual;
+        });
+
+        const cards = document.querySelectorAll(".tech-card");
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("show");
+                }
+            });
+        }, {
+            threshold: 0.2
+        });
+
+        cards.forEach((card) => {
+            observer.observe(card);
         });
     </script>
 
